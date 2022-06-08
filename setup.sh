@@ -7,6 +7,9 @@
     #Install Curl
     sudo apt install apt-transport-https curl
 
+    #Install Wget
+    sudo apt install wget
+
     #Install Brave-Browser
     sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
     echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
@@ -33,6 +36,10 @@
 
     #Install Timeshift
     sudo apt install timeshift
+
+    #Install Evernote
+    wget https://cdn1.evernote.com/boron/linux/builds/Evernote-10.7.6-linux-ddl-ga-2321.deb -O evernote.deb
+    sudo apt install ./evernote.deb
 
     #Install and Enable Flatpak Support
     sudo apt install flatpak
