@@ -2,13 +2,13 @@
 
     #Update and Upgrade
     sudo apt update
-    sudo apt upgrade
+    sudo apt upgrade -y
 
     #Install Curl
-    sudo apt install apt-transport-https curl
+    sudo apt install apt-transport-https curl -y
 
     #Install Wget
-    sudo apt install wget
+    sudo apt install wget -y
 
     #Install Brave-Browser
     sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
@@ -17,39 +17,39 @@
     sudo apt install brave-browser
 
     #Install VisualStudioCode
-    sudo apt install code
+    sudo apt install code -y
 
     #Install Insomnia
-    sudo apt install insomnia
+    sudo apt install insomnia -y
 
     #Install Beekeeper-Studio
-    sudo apt install beekeeper-studio
+    sudo apt install beekeeper-studio -y
 
     #Install Flameshot
-    sudo apt install flameshot
+    sudo apt install flameshot -y
 
     #Install Diodon
-    sudo apt install diodon
+    sudo apt install diodon -y
 
     #Install Piper
-    sudo apt install piper
+    sudo apt install piper -y
 
     #Install Timeshift
-    sudo apt install timeshift
+    sudo apt install timeshift -y
 
     #Install Evernote
     wget https://cdn1.evernote.com/boron/linux/builds/Evernote-10.7.6-linux-ddl-ga-2321.deb -O evernote.deb
-    sudo apt install ./evernote.deb
+    sudo dpkg ./evernote.deb
 
     #Install and Enable Flatpak Support
-    sudo apt install flatpak
+    sudo apt install flatpak -y
     flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
     #Install Spotify in Flatpak
-    flatpak install flathub com.spotify.Client
+    flatpak install flathub com.spotify.Client -y
 
     #Install Blanket in Flatpak
-    flatpak install --user https://flathub.org/repo/appstream/com.rafaelmardojai.Blanket.flatpakref
+    flatpak install --user https://flathub.org/repo/appstream/com.rafaelmardojai.Blanket.flatpakref-y
 
     #Install Sdkman
     curl -s "https://get.sdkman.io" | bash
@@ -76,5 +76,13 @@
     sudo apt install redis
 
     #Install Zsh and Set It as Default Shell
-    sudo apt install zsh
+    sudo apt install zsh -y
     chsh -s $(which zsh)
+
+    #Install IntelliJ Idea
+    wget https://download.jetbrains.com/idea/ideaIC-2022.1.2.tar.gz -c
+    tar -xzf ideaIC-2022.1.2.tar.gz
+    cd idea-IC-221.5787.30
+    ./configure
+    make
+    sudo make install
