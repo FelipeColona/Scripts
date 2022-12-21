@@ -1,0 +1,2 @@
+0 5 * * * DISPLAY=:0 /home/felipe/www/Scripts/set_wallpaper_based_on_day_night.sh 
+0 19 * * * DISPLAY=:0 /home/felipe/www/Scripts/set_wallpaper_based_on_day_night.sh
