@@ -7,6 +7,7 @@ import os
 import requests
 from dotenv import load_dotenv
 from oci.signer import Signer
+from plyer import notification
 
 from oracle_instance_specs import getSpecs
 
@@ -26,3 +27,11 @@ body = getSpecs()
 response = requests.post(endpoint, json=body, auth=auth)
 
 print(response.text)
+
+if(response.ok):
+    notification.notify(
+    title = 'ORACLE INSTANCE CREATED',
+    message = 'YES!!!',
+    app_icon = None,
+    timeout = 10,
+    )
